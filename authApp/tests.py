@@ -17,11 +17,7 @@ class TestAPI(TestCase):
                 "password": "password_prueba_1",
                 "name": "user prueba",
                 "email": "user_prueba_1@misionTIC.com",
-                "account": {
-                    "lastChangeDate": "2021-09-23T10:25:43.511Z",
-                    "balance": 20000,
-                    "isActive": "true"
-                }
+                "fecnac": "01/14/1972"
             }, 
             format='json')
         

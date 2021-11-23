@@ -4,10 +4,9 @@ from authApp.models.user import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'password', 'name', 'email']
+        fields = ['id', 'username', 'password', 'name', 'email', 'fecnac']
 
     def create(self, validated_data):
-        accountData = validated_data.pop('account')
         userInstance = User.objects.create(**validated_data)
         return userInstance
 
@@ -18,4 +17,5 @@ class UserSerializer(serializers.ModelSerializer):
                     'username': user.username,
                     'name': user.name,
                     'email': user.email,
+                    'fecnac': user.fecnac,
                 }
